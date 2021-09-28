@@ -75,4 +75,12 @@ IBMPVTRouteTable:
          Ref: IBMPUBRouteTable
        DestinationCidrBlock: 0.0.0.0/0
        GatewayId:
-         Ref: IBMInternetGateway        
+         Ref: IBMInternetGateway 
+         
+ IBMPUBSubnetRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId:
+        Ref: IBMPUBSubnet
+      RouteTableId:
+        Ref: IBMPUBRouteTable         
