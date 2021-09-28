@@ -83,4 +83,12 @@ IBMPVTRouteTable:
       SubnetId:
         Ref: IBMPUBSubnet
       RouteTableId:
-        Ref: IBMPUBRouteTable         
+        Ref: IBMPUBRouteTable     
+        
+ IBMPVTSubnetRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId:
+        Ref: IBMPVTSubnet
+      RouteTableId:
+        Ref: IBMPVTRouteTable        
