@@ -48,4 +48,13 @@ Resources:
       MapPublicIpOnLaunch: 'false'
       Tags:
       - Key: Name
-        Value: IBM-PVT       
+        Value: IBM-PVT
+        
+ IBMPUBRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId:  
+        Ref: VPC
+      Tags:
+      - Key: Name
+        Value: IBM-PUB-RT       
