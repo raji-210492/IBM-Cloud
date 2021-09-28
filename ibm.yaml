@@ -25,3 +25,15 @@ Resources:
          Ref: VPC
       InternetGatewayId:
          Ref: IBMInternetGateway
+         
+ IBMPUBSubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId:
+        Ref: VPC
+      CidrBlock: 10.0.0.0/24
+      AvailabilityZone: "eu-west-2a"
+      MapPublicIpOnLaunch: 'true'
+      Tags:
+      - Key: Name
+        Value: IBM-PUB 
